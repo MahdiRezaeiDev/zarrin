@@ -8,40 +8,37 @@
             <i class="fas fa-bars"></i>
         </button>
         <a class="md:block text-right md:pb-2 text-blueGray-600 ml-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
-            href="../../index.html">
+            href="{{ route('dashboard') }}">
             شرکت تولیدی پوشاک زرین
         </a>
         <ul class="md:hidden items-center flex flex-wrap list-none">
             <li class="inline-block relative">
-                <a class="text-blueGray-500 block py-1 px-3" href="#pablo"
+                <a class="text-blueGray-500 block py-1 px-3" href="#"
                     onclick="openDropdown(event,'notification-dropdown')">
                     <i class="fas fa-bell"></i>
                 </a>
                 <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-right rounded shadow-lg min-w-48"
                     id="notification-dropdown">
-                    <a href="#pablo"
+                    <a href="{{ route('profile.edit') }}"
                         class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
                         پروفایل کاربری
                     </a>
-                    <a href="#pablo"
+                    <a href="{{ route('profile.edit') }}"
                         class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
                         تنظیمات
                     </a>
-                    <a href="#pablo"
-                        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                        بخش های مختلف
-                    </a>
                     <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-                    <a href="#pablo"
+                    <span
                         class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <button type="submit" onclick="event.preventDefault();">
+                            <button class="outline-none focus:outline-none focus:border-none" type="submit"
+                                onclick="event.preventDefault();">
                                 {{ __('خروج') }}
                             </button>
                         </form>
-                    </a>
+                    </span>
                 </div>
             </li>
         </ul>
@@ -66,23 +63,23 @@
             </div>
 
             <ul class="md:flex-col md:min-w-full flex flex-col list-none">
-                <li class="items-center">
-                    <a href="./dashboard.html"
-                        class="text-xs uppercase py-3 font-bold block text-pink-500 hover:text-pink-600">
+                <li class="items-center {{ $title == 'داشبورد' ? 'bg-blueGray-200' : '' }} ">
+                    <a href="{{ route('dashboard') }}"
+                        class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
                         <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
                         داشبورد
                     </a>
                 </li>
 
-                <li class="items-center">
-                    <a href="./settings.html"
+                <li class="items-center {{ $title == '' ? '' : '' }}">
+                    <a href="{{ route('profile.edit') }}"
                         class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
                         <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
                         تنظیمات
                     </a>
                 </li>
 
-                <li class="items-center">
+                <li class="items-center {{ $title == '' ? '' : '' }}">
                     <a href="./tables.html"
                         class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
                         <i class="fas fa-table mr-2 text-sm text-blueGray-300"></i>
@@ -90,18 +87,18 @@
                     </a>
                 </li>
 
-                <li class="items-center">
+                <li class="items-center {{ $title == '' ? '' : '' }}">
                     <a href="./maps.html"
                         class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
                         <i class="fas fa-map-marked mr-2 text-sm text-blueGray-300"></i>
                         نقشه ها
                     </a>
                 </li>
-                <li class="items-center">
+                <li class="items-center {{ $title == 'ویرایش حساب کاربری' ? 'bg-blueGray-200' : '' }}">
                     <a href="{{ route('profile.edit') }}"
                         class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
                         <i class="fa-solid fa-user mr-2 text-sm text-blueGray-300"></i>
-                         حساب کاربری
+                        حساب کاربری
                     </a>
                 </li>
             </ul>
