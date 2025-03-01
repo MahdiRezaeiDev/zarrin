@@ -9,7 +9,7 @@
                                 <div class="flex flex-wrap">
                                     <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                                         <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                                            Traffic
+                                            ترافیک
                                         </h5>
                                         <span class="font-semibold text-xl text-blueGray-700">
                                             350,897
@@ -27,7 +27,7 @@
                                         <i class="fas fa-arrow-up"></i> 3.48%
                                     </span>
                                     <span class="whitespace-nowrap">
-                                        Since last month
+                                        از ماه اخیر
                                     </span>
                                 </p>
                             </div>
@@ -39,7 +39,7 @@
                                 <div class="flex flex-wrap">
                                     <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                                         <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                                            New users
+                                            کاربران جدید 
                                         </h5>
                                         <span class="font-semibold text-xl text-blueGray-700">
                                             2,356
@@ -56,7 +56,7 @@
                                     <span class="text-red-500 mr-2">
                                         <i class="fas fa-arrow-down"></i> 3.48%
                                     </span>
-                                    <span class="whitespace-nowrap"> Since last week </span>
+                                    <span class="whitespace-nowrap">از هفته اخیر</span>
                                 </p>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                 <div class="flex flex-wrap">
                                     <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                                         <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                                            Sales
+                                            فروشات
                                         </h5>
                                         <span class="font-semibold text-xl text-blueGray-700">
                                             924
@@ -84,7 +84,7 @@
                                     <span class="text-orange-500 mr-2">
                                         <i class="fas fa-arrow-down"></i> 1.10%
                                     </span>
-                                    <span class="whitespace-nowrap"> Since yesterday </span>
+                                    <span class="whitespace-nowrap">از دیروز</span>
                                 </p>
                             </div>
                         </div>
@@ -95,7 +95,7 @@
                                 <div class="flex flex-wrap">
                                     <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                                         <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                                            Performance
+                                            عملکرد
                                         </h5>
                                         <span class="font-semibold text-xl text-blueGray-700">
                                             49,65%
@@ -113,7 +113,7 @@
                                         <i class="fas fa-arrow-up"></i> 12%
                                     </span>
                                     <span class="whitespace-nowrap">
-                                        Since last month
+                                        از ماه گذشته
                                     </span>
                                 </p>
                             </div>
@@ -131,10 +131,10 @@
                         <div class="flex flex-wrap items-center">
                             <div class="relative w-full max-w-full flex-grow flex-1">
                                 <h6 class="uppercase text-blueGray-100 mb-1 text-xs font-semibold">
-                                    Overview
+                                    نمای کلی
                                 </h6>
                                 <h2 class="text-white text-xl font-semibold">
-                                    Sales value
+                                    مقادیر فروشات
                                 </h2>
                             </div>
                         </div>
@@ -153,10 +153,10 @@
                         <div class="flex flex-wrap items-center">
                             <div class="relative w-full max-w-full flex-grow flex-1">
                                 <h6 class="uppercase text-blueGray-400 mb-1 text-xs font-semibold">
-                                    Performance
+                                    عملکرد
                                 </h6>
                                 <h2 class="text-blueGray-700 text-xl font-semibold">
-                                    Total orders
+                                    مقادیر فروشات 
                                 </h2>
                             </div>
                         </div>
@@ -174,17 +174,16 @@
             <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
                 <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
                     <div class="rounded-t mb-0 px-4 py-3 border-0">
-                        <div class="flex flex-wrap items-center">
-                            <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                        <div class="flex justify-between flex-wrap items-center">
+                            <div class="relative w-full flex justify-between px-4 max-w-full flex-grow flex-1">
                                 <h3 class="font-semibold text-base text-blueGray-700">
-                                    Page visits
+                                    بازدیدها
                                 </h3>
-                            </div>
-                            <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+                            
                                 <button
                                     class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                     type="button">
-                                    See all
+                                    مشاهده همه
                                 </button>
                             </div>
                         </div>
@@ -196,19 +195,19 @@
                                 <tr>
                                     <th
                                         class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                                        Page name
+                                        صفحه
                                     </th>
                                     <th
                                         class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                                        Visitors
+                                        بازدیدها
                                     </th>
                                     <th
                                         class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                                        Unique users
+                                        کاربران جدید
                                     </th>
                                     <th
                                         class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                                        Bounce rate
+                                        نرخ ارتباط
                                     </th>
                                 </tr>
                             </thead>
@@ -317,16 +316,15 @@
                 <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
                     <div class="rounded-t mb-0 px-4 py-3 border-0">
                         <div class="flex flex-wrap items-center">
-                            <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                            <div class="relative flex justify-between w-full px-4 max-w-full flex-grow flex-1">
                                 <h3 class="font-semibold text-base text-blueGray-700">
-                                    Social traffic
+                                    ترافیک
                                 </h3>
-                            </div>
-                            <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+                            
                                 <button
                                     class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                     type="button">
-                                    See all
+                                    مشاهده همه
                                 </button>
                             </div>
                         </div>
@@ -338,11 +336,11 @@
                                 <tr>
                                     <th
                                         class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                                        Referral
+                                        رفرر
                                     </th>
                                     <th
                                         class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                                        Visitors
+                                        بازدیدها
                                     </th>
                                     <th
                                         class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px">
