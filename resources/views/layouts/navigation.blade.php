@@ -42,7 +42,8 @@
                 </div>
             </li>
         </ul>
-        <div class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden"
+        <aside
+            class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden"
             id="example-collapse-sidebar">
             <div class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200">
                 <div class="flex flex-wrap">
@@ -74,8 +75,8 @@
                 <li class="items-center {{ $title == '' ? '' : '' }}">
                     <a href="{{ route('profile.edit') }}"
                         class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-                        <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
-                        تنظیمات
+                        <i class="fa-solid fa-people-roof mr-2 text-sm text-blueGray-300"></i>
+                        مدیریت کاربران
                     </a>
                 </li>
 
@@ -94,14 +95,7 @@
                         نقشه ها
                     </a>
                 </li>
-                <li class="items-center {{ $title == 'ویرایش حساب کاربری' ? 'bg-blueGray-200' : '' }}">
-                    <a href="{{ route('profile.edit') }}"
-                        class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-                        <i class="fa-solid fa-user mr-2 text-sm text-blueGray-300"></i>
-                        حساب کاربری
-                    </a>
-                </li>
             </ul>
-        </div>
+        </aside>
     </div>
 </nav>
