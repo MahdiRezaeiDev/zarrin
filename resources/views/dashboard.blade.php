@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot:title>
+        داشبورد
+    </x-slot:title>>
     <div class="relative bg-blueGray-600 md:pt-32 pb-32 pt-12">
         <div class="px-4 md:px-5 mx-auto w-full">
             <div>

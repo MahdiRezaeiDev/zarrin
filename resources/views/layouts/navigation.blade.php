@@ -97,6 +97,13 @@
                         نقشه ها
                     </a>
                 </li>
+                <li class="items-center">
+                    <a href="{{ route('profile.edit') }}"
+                        class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
+                        <i class="fa-solid fa-user mr-2 text-sm text-blueGray-300"></i>
+                         حساب کاربری
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

@@ -1,8 +1,8 @@
 <nav
-    class="absolute top-0 right-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-end flex items-center p-4">
+    class="absolute top-0 right-0 w-full z-10 bg-blueGray-600 md:flex-row md:flex-nowrap md:justify-end flex items-center p-4">
     <div class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4">
         <a class="text-white text-sm uppercase md:inline-block font-semibold" href="./index.html">
-            داشبورد
+            {{ $title}}
         </a>
         <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
             <a class="text-blueGray-500 block" href="#pablo" onclick="openDropdown(event,'user-dropdown')">
