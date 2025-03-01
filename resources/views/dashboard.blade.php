@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="relative bg-pink-600 md:pt-32 pb-32 pt-12">
+    <div class="relative bg-blueGray-600 md:pt-32 pb-32 pt-12">
         <div class="px-4 md:px-5 mx-auto w-full">
             <div>
                 <div class="flex flex-wrap">
