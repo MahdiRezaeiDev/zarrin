@@ -13,21 +13,19 @@
                     <div class="relative w-full mb-3">
                         <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                             for="grid-password">ایمیل آدرس</label>
-                            <input type="email"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            placeholder="ایمیل آدرس" />
+                            <input type="email" name="email"placeholder="ایمیل آدرس"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"/>
                     </div>
                     <div class="relative w-full mb-3">
-                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                            for="grid-password">رمز عبور</label><input type="password"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            placeholder="رمز عبور" />
+                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"for="grid-password">رمز عبور</label>
+                            <input type="password" placeholder="رمز عبور" name="password"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"0 />
                     </div>
                     <div>
-                        <label class="inline-flex items-center cursor-pointer"><input id="customCheckLogin"
-                                type="checkbox"
-                                class="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150" /><span
-                                class="ml-2 text-sm font-semibold text-blueGray-600">مرا به خاطر بسپار</span>
+                        <label class="inline-flex items-center cursor-pointer">
+                            <input id="remember_me" name="remember" type="checkbox"
+                                class="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150" />
+                                <span class="ml-2 text-sm font-semibold text-blueGray-600">مرا به خاطر بسپار</span>
                             </label>
                     </div>
                     <div class="text-center mt-6">
