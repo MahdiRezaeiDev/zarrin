@@ -13,8 +13,13 @@
                     </span>
                 </div>
             </a>
-            <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-right rounded shadow-lg min-w-48"
+            <div class="hidden bg-white text-base z-50 float-right list-none text-right rounded shadow-lg min-w-48 overflow-hidden"
                 id="user-dropdown">
+                <div
+                    class="flex justify-between items-center p-4 font-normal w-full whitespace-nowrap bg-blueGray-700 text-white">
+                    <p class="text-xs">حساب کاربری:</p>
+                    <p class="text-xs">{{ auth()->user()->name }}</p>
+                </div>
                 <a href="{{ route('profile.edit') }}"
                     class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
                     پروفایل کاربری
@@ -25,7 +30,7 @@
                 </a>
 
                 <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-                <form class="px-4" method="POST" action="{{ route('logout') }}">
+                <form class="px-4 pb-2" method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button class="outline-none focus:outline-none focus:border-none" type="submit">
                         {{ __('خروج') }}

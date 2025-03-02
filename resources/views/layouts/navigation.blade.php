@@ -17,10 +17,16 @@
                     onclick="openDropdown(event,'notification-dropdown')">
                     <i class="fas fa-bell"></i>
                 </a>
-                <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-right rounded shadow-lg min-w-48"
+                <div class="hidden bg-white text-base z-50 float-right py-2 list-none text-right rounded shadow-lg min-w-48 overflow-hidden"
                     id="notification-dropdown">
+                    <div
+                        class="flex justify-between items-center p-4 font-normal w-full whitespace-nowrap bg-blueGray-700 text-white">
+                        <p class="text-xs">حساب کاربری:</p>
+                        <p class="text-xs">{{ auth()->user()->name }}</p>
+                    </div>
                     <a href="{{ route('profile.edit') }}"
                         class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+                        <i class="fa-solid fa-user"></i>
                         پروفایل کاربری
                     </a>
                     <a href="{{ route('profile.edit') }}"
@@ -43,7 +49,7 @@
             </li>
         </ul>
         <aside
-            class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden"
+            class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1  hidden"
             id="example-collapse-sidebar">
             <div class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200">
                 <div class="flex flex-wrap">
@@ -67,15 +73,17 @@
                 <li class="items-center {{ $title == 'داشبورد' ? 'bg-blueGray-200' : '' }} ">
                     <a href="{{ route('dashboard') }}"
                         class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-                        <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
+                        <i
+                            class="fas fa-tv mr-2 text-sm {{ $title == 'داشبورد' ? 'text-blueGray-500' : 'text-blueGray-300' }}"></i>
                         داشبورد
                     </a>
                 </li>
 
-                <li class="items-center {{ $title == '' ? '' : '' }}">
+                <li class="items-center {{ $title == 'کاربران' ? 'bg-blueGray-200' : '' }}">
                     <a href="{{ route('users.index') }}"
                         class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-                        <i class="fa-solid fa-people-roof mr-2 text-sm text-blueGray-300"></i>
+                        <i
+                            class="fa-solid fa-people-roof mr-2 text-sm {{ $title == 'کاربران' ? 'text-blueGray-500' : 'text-blueGray-300' }}"></i>
                         مدیریت کاربران
                     </a>
                 </li>
@@ -83,7 +91,8 @@
                 <li class="items-center {{ $title == '' ? '' : '' }}">
                     <a href="./tables.html"
                         class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-                        <i class="fas fa-table mr-2 text-sm text-blueGray-300"></i>
+                        <i
+                            class="fas fa-table mr-2 text-sm {{ $title == 'کاربران' ? 'text-blueGray-500' : 'text-blueGray-300' }}"></i>
                         جداول
                     </a>
                 </li>
@@ -91,7 +100,8 @@
                 <li class="items-center {{ $title == '' ? '' : '' }}">
                     <a href="./maps.html"
                         class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-                        <i class="fas fa-map-marked mr-2 text-sm text-blueGray-300"></i>
+                        <i
+                            class="fas fa-map-marked mr-2 text-sm {{ $title == 'کاربران' ? 'text-blueGray-500' : 'text-blueGray-300' }}"></i>
                         نقشه ها
                     </a>
                 </li>
