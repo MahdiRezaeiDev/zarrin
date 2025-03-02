@@ -21,7 +21,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        dd('ddddd');
+        return view('admin.users.create');
     }
 
     /**
