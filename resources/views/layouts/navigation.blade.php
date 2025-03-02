@@ -73,7 +73,7 @@
                 </li>
 
                 <li class="items-center {{ $title == '' ? '' : '' }}">
-                    <a href="{{ route('profile.edit') }}"
+                    <a href="{{ route('users.index') }}"
                         class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
                         <i class="fa-solid fa-people-roof mr-2 text-sm text-blueGray-300"></i>
                         مدیریت کاربران

@@ -21,11 +21,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" charset="utf-8"></script>
 </head>
 
-<body class="font-sans text-blueGray-700 antialiased">
+<body class="font-sans text-blueGray-700 antialiased bg-blueGray-100">
 
     @include('layouts.navigation')
 
-    <main class="relative md:mr-64 bg-blueGray-50">
+    <main class="relative md:mr-64">
         @include('layouts.topNav')
         {{ $slot }}
     </main>
