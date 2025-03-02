@@ -58,12 +58,12 @@
                                         </td>
                                         <td
                                             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                            <i class="fas fa-circle text-orange-500 mr-2"></i>
-                                            {{ $user->role }}
+                                            <i class="fas fa-circle text-green-600 mr-2"></i>
+                                            {{ $user->type }}
                                         </td>
                                         <td
                                             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                            <a href="#pablo" class="text-blueGray-500 block py-1 px-3"
+                                            <a href="#" class="text-blueGray-500 block py-1 px-3"
                                                 onclick="openDropdown(event,'table-light-1-dropdown')">
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
@@ -71,11 +71,11 @@
                                                 id="table-light-1-dropdown">
                                                 <a href="{{ route('users.edit', $user->id) }}"
                                                     class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                                                    ویرایش حساب کاربری
+                                                    ویرایش
                                                 </a>
                                                 <a href="{{ route('users.destroy', $user->id) }}"
                                                     class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                                                    حذف حساب کاربری
+                                                    حذف
                                                 </a>
                                             </div>
                                         </td>

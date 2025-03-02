@@ -29,7 +29,33 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'name' => 'required|string|max:255',
+                'email' => 'required|email|unique:users',
+                'type' => 'required|string',
+                'password' => 'required|string|min:8|confirmed',
+            ],
+            [
+                'name.required' => 'وارد کردن نام الزامی است',
+                'email.required' => 'وارد کردن ایمیل الزامی است',
+                'email.email' => 'ایمیل وارد شده معتبر نیست',
+                'email.unique' => 'این ایمیل قبلا ثبت شده است',
+                'type.required' => 'وارد کردن نوع کاربر الزامی است',
+                'password.required' => 'وارد کردن رمز عبور الزامی است',
+                'password.min' => 'رمز عبور باید حداقل 8 کاراکتر باشد',
+                'password.confirmed' => 'رمز عبور و تکرار آن باید یکسان باشد',
+            ]
+        );
+
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->type = $request->type;
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        return redirect()->route('users.create')->with('status', 'account-created');
     }
 
     /**

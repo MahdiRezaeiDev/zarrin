@@ -45,9 +45,9 @@
                                             <select
                                                 class="w-full mt-1 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
                                                 name="type" id="type">
-                                                <option selected value="user">مالی</option>
-                                                <option selected value="user">خیاط</option>
-                                                <option value="admin">مدیر</option>
+                                                <option selected value="مدیر مالی">مالی</option>
+                                                <option selected value="خیاط">خیاط</option>
+                                                <option value="مدیر سامانه">مدیر</option>
                                             </select>
                                             <x-input-error :messages="$errors->get('type')" class="mt-2" />
                                         </div>
@@ -73,15 +73,15 @@
                                             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                                         </div>
 
-                                        <div class="flex items-center justify-end mt-4">
+                                        <div class="flex items-center justify-start mt-4">
+                                            <x-primary-button class="me-4">
+                                                {{ __('ایجاد حساب کاربری') }}
+                                            </x-primary-button>
                                             @if (session('status') === 'account-created')
                                                 <p x-data="{ show: true }" x-show="show" x-transition
                                                     x-init="setTimeout(() => show = false, 2000)" class="text-sm text-green-700">
                                                     {{ __('حساب کاربری جدید موفقانه ایجاد گردید.') }}</p>
                                             @endif
-                                            <x-primary-button class="ms-4">
-                                                {{ __('ایجاد حساب') }}
-                                            </x-primary-button>
                                         </div>
                                     </form>
                                 </div>
