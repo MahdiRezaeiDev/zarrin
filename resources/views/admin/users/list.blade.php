@@ -44,7 +44,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($users as $user)
+                                @foreach ($users as $index => $user)
                                     <tr>
                                         <th
                                             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right flex items-center">
@@ -62,22 +62,15 @@
                                             {{ $user->type }}
                                         </td>
                                         <td
-                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                            <a href="#" class="text-blueGray-500 block py-1 px-3"
-                                                onclick="openDropdown(event,'table-light-1-dropdown')">
-                                                <i class="fas fa-ellipsis-v"></i>
+                                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 flex gap-2">
+                                            <a href="{{ route('users.edit', $user->id) }}"
+                                                class="bg-sky-300 hover:bg-sky-400 w-16 text-center rounded-sm p-2 text-blueGray-700">
+                                                ویرایش
                                             </a>
-                                            <div class="hidden bg-white text-base z-50 float-right py-2 list-none text-right rounded shadow-lg min-w-48"
-                                                id="table-light-1-dropdown">
-                                                <a href="{{ route('users.edit', $user->id) }}"
-                                                    class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                                                    ویرایش
-                                                </a>
-                                                <a href="{{ route('users.destroy', $user->id) }}"
-                                                    class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                                                    حذف
-                                                </a>
-                                            </div>
+                                            <a href="{{ route('users.destroy', $user->id) }}"
+                                                class="bg-rose-300 hover:bg-rose-400 w-16 text-center rounded-sm p-2 text-blueGray-700">
+                                                حذف
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach

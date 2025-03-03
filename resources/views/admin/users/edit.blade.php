@@ -58,19 +58,19 @@
                                             <x-input-label for="password" :value="__('رمز عبور')" />
 
                                             <x-text-input id="password" class="block mt-1 w-full" type="password"
-                                                name="password" required autocomplete="new-password" />
+                                                name="password" autocomplete="new-password" />
 
                                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                         </div>
 
                                         <div class="flex items-center justify-start mt-4">
                                             <x-primary-button class="me-4">
-                                                {{ __('ایجاد حساب کاربری') }}
+                                                {{ __('ویرایش') }}
                                             </x-primary-button>
-                                            @if (session('status') === 'account-created')
+                                            @if (session('status') === 'account-updated')
                                                 <p x-data="{ show: true }" x-show="show" x-transition
-                                                    x-init="setTimeout(() => show = false, 2000)" class="text-sm text-green-700">
-                                                    {{ __('حساب کاربری جدید موفقانه ایجاد گردید.') }}</p>
+                                                    x-init="setTimeout(() => show = false, 2000)" class="text-sm text-gray-600">
+                                                    {{ __('حساب کاربری موفقانه ویرایش گردید.') }}</p>
                                             @endif
                                         </div>
                                     </form>

@@ -85,7 +85,7 @@ class UserController extends Controller
             [
                 'name' => 'required|string|max:255',
                 'email' => 'required|email|unique:users,email,' . $user->id,
-                'type' => 'required|in:admin,user',
+                'type' => 'required|in:مدیر مالی,خیاط,مدیر سامانه',
                 'password' => 'nullable|string|min:8|confirmed',
             ],
             [
@@ -107,7 +107,7 @@ class UserController extends Controller
         }
         $user->save();
 
-        return redirect()->route('account.edit', $user)->with('status', 'account-updated');
+        return redirect()->route('users.edit', $user)->with('status', 'account-updated');
     }
 
     /**
