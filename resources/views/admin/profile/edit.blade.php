@@ -3,8 +3,8 @@
         ویرایش حساب کاربری
     </x-slot:title>
 
-    <div class="md:py-16 flex gap-4">
-        <div class="pt-6 md:pt-8 sm:px-6 lg:px-8 space-y-6">
+    <div class="md:py-16 flex flex-col-reverse md:flex-row gap-4">
+        <div class="pt-6 md:w-2/3 md:pt-8 sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="max-w-xl">
                     @include('admin.profile.partials.update-profile-information-form')
@@ -23,13 +23,13 @@
                 </div>
             </div>
         </div>
-        <div class="w-full lg:w-4/12 px-4">
+        <div class="pt-6 md:w-1/3 md:pt-8 sm:px-6 lg:px-8 space-y-6">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-16">
                 <div class="px-6">
                     <div class="flex flex-wrap justify-center">
                         <div class="w-full px-4 flex justify-center">
-                            <div class="relative">
-                                <img alt="..." src="{{ asset('img/team-2-800x800.jpg') }}"
+                            <div class="relative bg-white">
+                                <img alt="..." src="{{ asset('img/avatar.png') }}"
                                     class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px">
                             </div>
                         </div>
