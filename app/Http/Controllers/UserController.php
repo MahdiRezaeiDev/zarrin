@@ -78,9 +78,36 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, User $user)
     {
-        //
+
+        $request->validate(
+            [
+                'name' => 'required|string|max:255',
+                'email' => 'required|email|unique:users,email,' . $user->id,
+                'type' => 'required|in:admin,user',
+                'password' => 'nullable|string|min:8|confirmed',
+            ],
+            [
+                'name.required' => 'وارد کردن نام الزامی است',
+                'email.required' => 'وارد کردن ایمیل الزامی است',
+                'email.email' => 'ایمیل وارد شده معتبر نیست',
+                'email.unique' => 'این ایمیل قبلا ثبت شده است',
+                'type.required' => 'وارد کردن نوع کاربر الزامی است',
+                'password.min' => 'رمز عبور باید حداقل 8 کاراکتر باشد',
+                'password.confirmed' => 'رمز عبور و تکرار آن باید یکسان باشد',
+            ]
+        );
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->type = $request->type;
+        if ($request->password) {
+            $user->password = bcrypt($request->password);
+        }
+        $user->save();
+
+        return redirect()->route('account.edit', $user)->with('status', 'account-updated');
     }
 
     /**

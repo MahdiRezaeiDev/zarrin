@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Foundation\Inspiring;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -18,6 +19,7 @@ class ProfileController extends Controller
     {
         return view('admin.profile.edit', [
             'user' => $request->user(),
+            'comment' => Inspiring::quote()
         ]);
     }
 
