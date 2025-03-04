@@ -69,9 +69,11 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(User $user)
     {
-        $user = User::find($id);
+        if (!$user) {
+            return redirect()->back()->with('error', 'کاربر یافت نشد.');
+        }
         return view('admin.users.edit', ['user' => $user]);
     }
 
@@ -80,7 +82,6 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-
         $request->validate(
             [
                 'name' => 'required|string|max:255',
@@ -110,10 +111,8 @@ class UserController extends Controller
         return redirect()->route('users.edit', $user)->with('status', 'ویرایش موفقانه صورت گرفت');
     }
 
-    public function destroy(string $id)
+    public function destroy(User $user)
     {
-        $user = User::find($id);
-
         if (!$user) {
             return redirect()->back()->with('error', 'کاربر یافت نشد.');
         }
