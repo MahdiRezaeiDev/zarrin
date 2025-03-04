@@ -46,9 +46,9 @@
                                             <select
                                                 class="w-full mt-1 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
                                                 name="type" id="type">
-                                                <option  @selected($user->type == 'مدیر مالی') value="مدیر مالی">مالی</option>
-                                                <option  @selected($user->type == 'خیاط') value="خیاط">خیاط</option>
-                                                <option  @selected($user->type == 'مدیر سامانه') value="مدیر سامانه">مدیر</option>
+                                                <option @selected($user->type == 'مدیر مالی') value="مدیر مالی">مالی</option>
+                                                <option @selected($user->type == 'خیاط') value="خیاط">خیاط</option>
+                                                <option @selected($user->type == 'مدیر سامانه') value="مدیر سامانه">مدیر</option>
                                             </select>
                                             <x-input-error :messages="$errors->get('type')" class="mt-2" />
                                         </div>
@@ -67,10 +67,19 @@
                                             <x-primary-button class="me-4">
                                                 {{ __('ویرایش') }}
                                             </x-primary-button>
-                                            @if (session('status') === 'account-updated')
+                                            @if (session('status'))
                                                 <p x-data="{ show: true }" x-show="show" x-transition
                                                     x-init="setTimeout(() => show = false, 2000)" class="text-sm text-gray-600">
                                                     {{ __('حساب کاربری موفقانه ویرایش گردید.') }}</p>
+                                                <script>
+                                                    Swal.fire({
+                                                        icon: 'success',
+                                                        title: 'موفق!',
+                                                        text: "{{ session('status') }}",
+                                                        timer: 2000,
+                                                        showConfirmButton: false
+                                                    });
+                                                </script>
                                             @endif
                                         </div>
                                     </form>

@@ -77,7 +77,7 @@
                                             <x-primary-button class="me-4">
                                                 {{ __('ایجاد حساب کاربری') }}
                                             </x-primary-button>
-                                            @if (session('status') === 'account-created')
+                                            @if (session('status'))
                                                 <script>
                                                     Swal.fire({
                                                         icon: 'success',
