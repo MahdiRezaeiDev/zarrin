@@ -68,7 +68,7 @@
                                                 class="bg-sky-300 hover:bg-sky-400 w-16 text-center rounded-sm p-2 text-blueGray-700">
                                                 ویرایش
                                             </a>
-                                            <form onsubmit="checkIsAllowed(event, this)"
+                                            <form onsubmit="confirmDelete(event, this)"
                                                 action="{{ route('users.destroy', $user->id) }}" method="post">
                                                 @csrf
                                                 @method('delete')
@@ -88,44 +88,35 @@
             </div>
         </div>
     </div>
-    <div id="modal" class="hidden flex justify-center absolute inset-0 bg-black/80 pt-16">
-        <div class="bg-white rounded p-5 mt-8 h-48">
-            <div class="flex justify-between items-center">
-                <h1 class="text-2xl font-semibold">حذف حساب کاربری</h1>
-                <i onclick="toggleModal()" class="fa-solid fa-xmark text-rose-700 cursor-pointer"></i>
-            </div>
-            <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-            <p class="text-gray-500 text-sm">
-                آیا مطمئن هستید این حساب را حذف می نمایید؟
-                <br>
-                بعد از حذف حساب کاربری اطلاعات دیگر در دسترس نخواهد بود.
-            </p>
-            <div class="flex items-center gap-2 pt-5">
-                <button onclick="toggleModal()"
-                    class="bg-blueGray-700 text-white rounded text-center text-sm p-2 w-24">انصراف</button>
-                <button onclick="deleteUser()"
-                    class="bg-rose-700 text-white rounded text-center text-sm p-2 w-24">حذف</button>
-            </div>
-        </div>
-    </div>
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'موفق!',
+                text: "{{ session('success') }}",
+                timer: 2000,
+                showConfirmButton: false
+            });
+        </script>
+    @endif
+
     <script>
-        let FORM_TO_SUBMIT = null;
-        const MODAL = document.getElementById('modal');
-
-        function checkIsAllowed(event, form) {
-            event.preventDefault(); // Prevent form submission
-            FORM_TO_SUBMIT = form; // Store the form reference
-            toggleModal(); // Show modal
-        }
-
-        function toggleModal() {
-            MODAL.classList.toggle('hidden');
-        }
-
-        function deleteUser() {
-            if (FORM_TO_SUBMIT) {
-                FORM_TO_SUBMIT.submit(); // Submit the stored form
-            }
+        function confirmDelete(event, form) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'آیا مطمئن هستید؟',
+                text: "بعد از حذف حساب کاربری اطلاعات دیگر در دسترس نخواهد بود!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'بله، حذف کن!',
+                cancelButtonText: 'انصراف'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit(); // Directly submit the form
+                }
+            });
         }
     </script>
 </x-app-layout>

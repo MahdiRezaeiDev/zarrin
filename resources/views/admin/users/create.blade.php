@@ -78,9 +78,15 @@
                                                 {{ __('ایجاد حساب کاربری') }}
                                             </x-primary-button>
                                             @if (session('status') === 'account-created')
-                                                <p x-data="{ show: true }" x-show="show" x-transition
-                                                    x-init="setTimeout(() => show = false, 2000)" class="text-sm text-green-700">
-                                                    {{ __('حساب کاربری جدید موفقانه ایجاد گردید.') }}</p>
+                                                <script>
+                                                    Swal.fire({
+                                                        icon: 'success',
+                                                        title: 'موفق!',
+                                                        text: "{{ session('status') }}",
+                                                        timer: 2000,
+                                                        showConfirmButton: false
+                                                    });
+                                                </script>
                                             @endif
                                         </div>
                                     </form>

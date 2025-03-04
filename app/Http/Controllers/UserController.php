@@ -55,7 +55,7 @@ class UserController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
-        return redirect()->route('users.create')->with('status', 'account-created');
+        return redirect()->route('users.create')->with('status', 'حساب کاربری موفقانه ایجاد شد.');
     }
 
     /**
@@ -107,17 +107,19 @@ class UserController extends Controller
         }
         $user->save();
 
-        return redirect()->route('users.edit', $user)->with('status', 'account-updated');
+        return redirect()->route('users.edit', $user)->with('status', 'ویرایش موفقانه صورت گرفت');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         $user = User::find($id);
+
+        if (!$user) {
+            return redirect()->back()->with('error', 'کاربر یافت نشد.');
+        }
+
         $user->delete();
 
-        return redirect()->back()->with('status', 'account-deleted');
+        return redirect()->back()->with('success', 'حساب کاربری با موفقیت حذف شد.');
     }
 }
